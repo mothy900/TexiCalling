@@ -46,6 +46,14 @@ function Home() {
                 <img src={require("../img/calender.jpg")}></img>
               </a>
             </div>
+            <div>
+              <div className="mainBanner"></div>
+              <botton className="leftArrow"></botton>
+              <botton className="rightArrow"></botton>
+              <a href="https://www.mungeyo.co.kr">
+                <img src={require("../img/cat-horizental.jpg")}></img>
+              </a>
+            </div>
           </div>
         </div>
       </header>
