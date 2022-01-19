@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
-import useWatchLocation from "../hooks/userCurrentPosition";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, A11y } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 function Home() {
   let lat, long;
@@ -46,13 +50,45 @@ function Home() {
                 <img src={require("../img/calender.jpg")}></img>
               </a>
             </div>
-            <div>
-              <div className="mainBanner"></div>
-              <botton className="leftArrow"></botton>
-              <botton className="rightArrow"></botton>
-              <a href="https://www.mungeyo.co.kr">
-                <img src={require("../img/cat-horizental.jpg")}></img>
-              </a>
+            <div className="banner">
+              <Swiper
+                // install Swiper modules
+                modules={[Navigation, Pagination, A11y]}
+                spaceBetween={50}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                scrollbar={{ draggable: true }}
+                onSwiper={(swiper) => console.log(swiper)}
+                autoplay={{ delay: 1000 }} // 추가
+                onSlideChange={() => console.log("slide change")}
+              >
+                <SwiperSlide>
+                  <img
+                    className="banner-img"
+                    src={require("../img/cat-horizental.jpg")}
+                  ></img>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    className="banner-img"
+                    src={require("../img/cat-horizental.jpg")}
+                  ></img>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    className="banner-img"
+                    src={require("../img/cat-horizental.jpg")}
+                  ></img>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    className="banner-img"
+                    src={require("../img/cat-horizental.jpg")}
+                  ></img>
+                </SwiperSlide>
+                ...
+              </Swiper>
             </div>
           </div>
         </div>
