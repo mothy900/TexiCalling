@@ -42,12 +42,15 @@ function Home() {
           <div>
             <div className="callTaxi">
               <a href="/Calltaxi">
-                <img src={require("../img/taxi.jpg")}></img>
+                <img alt="call taxi" src={require("../img/taxi.jpg")}></img>
               </a>
             </div>
             <div className="checkBook">
               <a href="/CheckBook">
-                <img src={require("../img/calender.jpg")}></img>
+                <img
+                  alt="check book"
+                  src={require("../img/calender.jpg")}
+                ></img>
               </a>
             </div>
             <div className="banner">
@@ -65,24 +68,28 @@ function Home() {
               >
                 <SwiperSlide>
                   <img
+                    alt="이미지1"
                     className="banner-img"
                     src={require("../img/cat-horizental.jpg")}
                   ></img>
                 </SwiperSlide>
                 <SwiperSlide>
                   <img
+                    alt="이미지2"
                     className="banner-img"
                     src={require("../img/cat-horizental.jpg")}
                   ></img>
                 </SwiperSlide>
                 <SwiperSlide>
                   <img
+                    alt="이미지3"
                     className="banner-img"
                     src={require("../img/cat-horizental.jpg")}
                   ></img>
                 </SwiperSlide>
                 <SwiperSlide>
                   <img
+                    alt="이미지4"
                     className="banner-img"
                     src={require("../img/cat-horizental.jpg")}
                   ></img>
@@ -93,6 +100,99 @@ function Home() {
           </div>
         </div>
       </header>
+      <body>
+        <div>
+          <h3>멍이요 AI 추천</h3>
+          <ql>
+            <li className="ai-store">
+              <h5>**와 비슷한 아이들이 좋아하는 스토어에요</h5>
+              <div>
+                <a href="/">
+                  <img src={require("../img/cat-horizental.jpg")}></img>
+                </a>
+              </div>
+            </li>
+            <li className="ai-hospital">
+              <h5>**와 비슷한 아이들이 좋아하는 병원이에요</h5>
+              <div>
+                <a href="/">
+                  <img src={require("../img/cat-horizental.jpg")}></img>
+                </a>
+              </div>
+            </li>
+            <li className="ai-event-banner">
+              <div className="banner">
+                <Swiper
+                  // install Swiper modules
+                  modules={[Navigation, Pagination, A11y]}
+                  spaceBetween={50}
+                  slidesPerView={2}
+                  navigation
+                  pagination={{ clickable: true }}
+                  scrollbar={{ draggable: true }}
+                  onSwiper={(swiper) => console.log(swiper)}
+                  autoplay={{ delay: 10 }} // 추가
+                  onSlideChange={() => console.log("slide change")}
+                >
+                  <SwiperSlide>
+                    <img
+                      alt="event1"
+                      className="event-banner-img"
+                      src={require("../img/cat-horizental.jpg")}
+                    ></img>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      alt="event1"
+                      className="event-banner-img"
+                      src={require("../img/cat-horizental.jpg")}
+                    ></img>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      alt="event1"
+                      className="event-banner-img"
+                      src={require("../img/cat-horizental.jpg")}
+                    ></img>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      alt="event1"
+                      className="event-banner-img"
+                      src={require("../img/cat-horizental.jpg")}
+                    ></img>
+                  </SwiperSlide>
+                  ...
+                </Swiper>
+              </div>
+            </li>
+            <li className="ai-hairshop">
+              <h5>**와 비슷한 아이들이 좋아하는 미용실이에요</h5>
+              <div>
+                <a href="/">
+                  <img src={require("../img/cat-horizental.jpg")}></img>
+                </a>
+              </div>
+            </li>
+            <li className="ai-academy">
+              <h5>**와 비슷한 아이들이 좋아하는 유치원이에요</h5>
+              <div>
+                <a href="/">
+                  <img src={require("../img/cat-horizental.jpg")}></img>
+                </a>
+              </div>
+            </li>
+            <li className="ai-cafe">
+              <h5>**와 비슷한 아이들이 좋아하는 카페에요</h5>
+              <div>
+                <a href="/">
+                  <img src={require("../img/cat-horizental.jpg")}></img>
+                </a>
+              </div>
+            </li>
+          </ql>
+        </div>
+      </body>
     </div>
   );
 }
