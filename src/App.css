@@ -13,3 +13,13 @@
   display: flex;
   justify-content: center;
 }
+
+.client-ask {
+  width: 100%;
+  height: 500px;
+}
+.client-ask-inputbox {
+  width: 50%;
+  height: 200px;
+  white-space: pre-wrap;
+}
